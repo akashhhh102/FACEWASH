@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimalist Facewash</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product {
+            display: none;
+        }
+        .prank {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+        }
+        .emoji {
+            font-size: 40px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: black;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Fake Product Info -->
+    <div id="product" class="product">
+        <h2>Minimalist 2% Salicylic Acid Facewash</h2>
+        <p>Removes acne, oil & dirt</p>
+        <button onclick="showPrank()">Buy Now</button>
+    </div>
+
+    <!-- Prank Output -->
+    <div id="prank" class="prank">
+        April Fool 🤡🤡🤡
+        <div class="emoji">😂🤣🤡</div>
+    </div>
+
+</div>
+
+<script>
+    // Show product first for 2 seconds, then prank
+    setTimeout(() => {
+        document.getElementById("product").style.display = "none";
+        document.getElementById("prank").style.display = "block";
+    }, 2000);
+
+    function showPrank() {
+        document.getElementById("product").style.display = "none";
+        document.getElementById("prank").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
